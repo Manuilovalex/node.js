@@ -138,16 +138,16 @@ readFileAsync('example.txt')
  */
 
 async function deleteFileAsync(filename) {
-   try {
-     await unlink(filename)
-     console.log('Файл успішно видалено')
-   } catch (error) {
-     if (error.code === 'ENOENT') {
-       console.error('Файл не існує:', filename)
-     } else {
-       console.error('Помилка при видаленні файлу:', error)
-     }
-   }
+  try {
+    await unlink(filename)
+    console.log('Файл успішно видалено')
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      console.error('Файл не існує:', filename)
+    } else {
+      console.error('Помилка при видаленні файлу:', error)
+    }
+  }
 }
 
 // ! Приклад використання:
